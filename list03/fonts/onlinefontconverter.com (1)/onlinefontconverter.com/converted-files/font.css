@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Tahoma';
+  src: url('Tahoma.svg#Tahoma') format('svg'),
+       url('Tahoma.ttf') format('truetype'),
+       url('Tahoma.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'tahoma';
+  src: url('tahoma.eot');
+  src: url('tahoma.eot?#iefix') format('embedded-opentype'),
+       url('tahoma.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

@@ -1,0 +1,125 @@
+//color
+@mixin text-color($args...){
+  @debug keywords($args);
+  @each $name, $color in keywords($args) {
+      .text-#{$name}{
+          color: $color;
+      }
+  }
+}
+@include text-color(
+  $llblue: #7e95c1,
+  $dblue: #002569,
+  $blue: #002a8d,
+  $lblue: #0d3691,
+  $white: #fff,
+  $dark: #333,
+  $dgray: #555,
+  $gray: #666,
+  $lgray: #888,
+  $llgray: #999,
+  $rgba: rgba(59, 59, 59, 0.8),
+  $rgba2: rgba(59, 59, 59, 0.7),
+  $yellow: #ff9f08
+);
+
+//border
+@mixin border($direction, $width, $style, $color) {
+	border-#{$direction}: $width $style $color;
+}
+
+//vendor prefix
+@mixin vendor-prefix($name, $value) {
+	@each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') {
+	  #{$vendor}#{$name}: #{$value};
+	}
+}
+// position
+@mixin position($name, $top: null, $right: null, $bottom: null, $left: null){
+	position: $name;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+// add font-face
+@mixin font-face($font-name, $url) {
+  @font-face {
+    font-family: $font-name;
+    src: url(#{$url});
+  }
+}
+// font for body
+@mixin main-font ($mf-style, $mf-weight, $mf-size, $mf-family) {
+    font: $mf-style $mf-weight $mf-size $mf-family;
+}
+
+// text-truncate
+@mixin text-truncate($line, $lineHeight) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    line-height: $lineHeight;
+    max-height: $lineHeight * $line;
+}
+
+@mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: white){
+    overflow: hidden;
+    position: relative;
+    line-height: $lineHeight;
+    max-height: $lineHeight * $lineCount; 
+    text-align: justify;
+    margin-right: -1em;
+    padding-right: 1em;
+    &:before {
+      content: '...';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      width: 1em;
+      height: 1em;
+      margin-top: 0.2em;
+      background: $bgColor;
+    }
+}
+
+// Tables
+.table {
+    width: 100%;
+    th,
+    td {
+      padding: 19px 15px;
+      vertical-align: middle;
+    }
+}
+
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+// White space
+// $x: 1;
+// @while $x < 20 {
+// 	.p-#{$x} {padding: $x * 5px}
+// 	.pt-#{$x} {padding-top: $x * 5px;}
+// 	.pr-#{$x} {padding-right: $x * 5px;}
+// 	.pb-#{$x} {padding-bottom: $x * 5px;}
+// 	.pl-#{$x} {padding-left: $x * 5px;}
+// 	.m-#{$x} {margin: $x * 5px}
+// 	.mt-#{$x} {margin-top: $x * 5px;}
+// 	.mr-#{$x} {margin-right: $x * 5px;}
+// 	.mb-#{$x} {margin-bottom: $x * 5px;}
+// 	.ml-#{$x} {margin-left: $x * 5px;}
+// 	$x:$x+1;
+// }

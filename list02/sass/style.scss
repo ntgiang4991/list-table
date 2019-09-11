@@ -1,0 +1,151 @@
+@import './reset';
+//@import './main';
+@font-face {
+    font-family: 'Tahoma';
+    src: url('../fonts/Tahoma.svg#Tahoma') format('svg'),
+         url('../fonts/Tahoma.ttf') format('truetype'),
+         url('../fonts/Tahoma.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'tahoma';
+    src: url('../fonts/tahoma.eot');
+    src: url('../fonts/tahoma.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/tahoma.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'Tahoma-Bold';
+    src: url('../fonts/Tahoma-Bold.svg#Tahoma-Bold') format('svg'),
+         url('../fonts/Tahoma-Bold.ttf') format('truetype'),
+         url('../fonts/Tahoma-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'tahomabd';
+    src: url('../fonts/tahomabd.eot');
+    src: url('../fonts/tahomabd.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/tahomabd.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'dotum';
+    src: url('../fonts/dotum.ttc');
+    font-weight: normal;
+    font-style: normal;
+  }
+  body{
+      font-family: 'tahoma', sans-serif;
+      
+      font-size: 12px;
+      max-width: 602px;
+        margin: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+  }
+  body, a{color:#2d2c2d;}
+  a{text-decoration: none}
+  .bold{
+    font-family: 'tahomabd', sans-serif;
+    font-weight: 700;
+  }
+// .container{
+//     max-width: 541px;
+//     margin: auto;
+//     padding-left: 10px;
+//     padding-right: 10px;
+// }
+.lh-17{
+    line-height: 17.93px;
+}
+.list {
+    & > li{
+        padding: 10px;
+        border: 1px solid #c2c2c2;
+        margin-top: 12px;
+        &:first-child{
+            width: 500px;
+            & dt, & dd{
+                line-height: 14px;
+                display: inline;
+            }
+            & img, & dl {
+                vertical-align: top;
+            }
+        }
+        &:nth-child(2){
+            line-height: 16px;
+            & img, & article {
+                vertical-align: bottom;
+            }
+        }
+        &:last-child{padding: 0 0 10px;}
+        & li{
+            line-height: 14px;
+            &:not(:first-child){
+                //margin-top: 12px;
+            }
+        }
+        & a{
+            display: table;
+            & img, & dl, & article {
+                display: table-cell;
+                
+            }
+            & img{width: 90px;}
+            & dl, & article{
+                padding-left: 10px;
+                & dt{
+                    @extend .bold
+                }
+                
+            }
+        }
+    }
+    &-item-content {
+        width: 387.98px;
+        & h2{
+            font-size: 14px;
+            line-height: 22px;
+            @extend .bold;
+        }
+        & p{
+            line-height: 16px;
+        }
+    }
+    & > li:nth-child(3){
+        max-width: 412px;
+    }
+    &-grid{
+        overflow: hidden;
+        // &:after{
+        //     clear: both;
+        // }
+        & li{
+            float: left;
+            width: 22%;
+            // &:last-child{
+            //     clear: both;
+            // }
+        }
+        &-item {
+            margin-left: 10px;
+            margin-top: 10px;
+            & span{
+                background: #7d7d7d;
+                color: #fff;
+                display: block;
+                text-align: center;
+                padding: 5px 0;
+            }
+        }
+        
+    }
+}
+    

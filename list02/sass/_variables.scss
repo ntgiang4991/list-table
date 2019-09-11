@@ -1,0 +1,50 @@
+@import './fonts';
+// Variables - creat grid
+$mobile: 576px;//sm
+$tablet: 576px;//md
+$ipad: 576px;//lg
+//$small-desktop: 1200px;//xl
+//$larger-desktop: 1601px;
+$gutter: 10px;
+$col-number: 16;
+
+// Main font
+$mf-style: normal;//normal - italic - oblique
+$mf-weight: 400;
+.s13{font-size: 13px;}
+.s14{font-size: 14px;}
+// .s15{font-size: 15px}
+// .s24{font-size: 24px;}
+// .s39{font-size: 39.5px}
+// .s43{font-size: 43.5px}
+// .s45{font-size: 45.5px}
+// .s89{font-size: 89.5px}
+// .s100{font-size: 100.5px;}
+
+//line-height
+$mf-family: 'NanumGothic';
+$font1: 'SDGothicNeoa-dRg';
+$font2: 'SDGothicNeoa-gBd';
+$font3: 'NotoSansCJKkr';
+$font4: 'SDGothicNeoa-aTh';
+$font5: 'GothamBold';
+$font6: 'Gotham-Light';
+$font7: 'Roboto';
+$font8: 'NanumGothicBold';
+
+// Main color
+$llblue: #7e95c1;
+$dblue: #002569;
+$blue: #002a8d;
+$lblue: #0d3691;
+$white: #fff;
+$dwhite: #f5f5f5;
+$dark: #333;
+$dgray: #555;
+$gray: #666;
+$lgray: #888;
+$llgray: #999;
+$rgba: rgba(59, 59, 59, 0.8);
+$rgba2: rgba(59, 59, 59, 0.7);
+$yellow: #ff9f08;
+

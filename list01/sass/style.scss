@@ -1,0 +1,156 @@
+@import './reset';
+//@import './main';
+@font-face {
+    font-family: 'Tahoma';
+    src: url('../fonts/Tahoma.svg#Tahoma') format('svg'),
+         url('../fonts/Tahoma.ttf') format('truetype'),
+         url('../fonts/Tahoma.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'tahoma';
+    src: url('../fonts/tahoma.eot');
+    src: url('../fonts/tahoma.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/tahoma.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'Tahoma-Bold';
+    src: url('../fonts/Tahoma-Bold.svg#Tahoma-Bold') format('svg'),
+         url('../fonts/Tahoma-Bold.ttf') format('truetype'),
+         url('../fonts/Tahoma-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'tahomabd';
+    src: url('../fonts/tahomabd.eot');
+    src: url('../fonts/tahomabd.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/tahomabd.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'dotum';
+    src: url('../fonts/dotum.ttc');
+    font-weight: normal;
+    font-style: normal;
+  }
+  body{
+      font-family: 'tahoma', sans-serif;
+      color:#151515;
+      font-size: 12px;
+      max-width: 541px;
+        margin: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+  }
+// .container{
+//     max-width: 541px;
+//     margin: auto;
+//     padding-left: 10px;
+//     padding-right: 10px;
+// }
+.lh-17{
+    line-height: 17.93px;
+}
+.list {
+    & > li{
+        padding: 20px;
+        border: 1px solid #c2c2c2;
+        margin-top: 12px;
+        & li{
+            line-height: 14px;
+            &:not(:first-child){
+                margin-top: 6px;
+            }
+            &:first-child{
+                font-family: 'tahomabd', sans-serif;
+                font-weight: 700;
+            }
+        }
+        &:first-child {
+            &> ul li:nth-child(-n + 2){
+                //list-style: square;
+                @extend .lh-17;
+            }
+        }
+        &:nth-child(2) ul > li {
+            background: url(../img/square.jpg) no-repeat top 6px left;
+            padding-left: 10px;
+        }
+        &:nth-child(3) ol > li{
+            padding-left: 20px;
+            &:first-child{
+                background: url(../img/square1.jpg) no-repeat top left;
+            }
+            &:nth-child(2){
+                background: url(../img/square2.jpg) no-repeat top left;
+            }
+            &:nth-child(3){
+                background: url(../img/square3.jpg) no-repeat top left;
+            }
+            &:nth-child(4){
+                background: url(../img/square4.jpg) no-repeat top left;
+            }
+            &:nth-child(5){
+                background: url(../img/square5.jpg) no-repeat top left;
+            }
+        }
+        &:nth-child(4) ul li{
+            //display: table;
+            & > span:first-child {
+                // background: #f76535;
+                // border: 1px solid #df6709;
+                // padding: 1px;
+                // display: inline-block;
+                position: relative;
+                // display: table-cell;
+                // vertical-align: middle;
+                // margin-right: 5px;
+                background: url(../img/bg.png);
+                color: #fff;
+                font-size: 11px;
+                //padding: 3px 4px 0 4px;
+                font-family: 'dotum', sans-serif;
+                display:block;
+                height: 16px;
+                float: left;
+                &:after, &:before{
+                    content: '';
+                    top: 0;
+                    display: block;
+                    
+                    height: 100%;
+                    background-size:cover; 
+                    position: absolute;
+                }
+                &:after{
+                    background: url('../img/left.png') no-repeat top left;
+                    left: 0;
+                    width: 3px;
+                }
+                &:before{
+                    background: url('../img/right (3).png') no-repeat top right;
+                    right: 0;
+                    width: 4px;
+                }
+                &> span{
+                    //background: #f4551e;
+                    color: #fff;
+                    font-size: 11px;
+                    padding: 2px 4px 0;
+                    font-family: 'dotum', sans-serif;
+                    display: inline-block;
+                    font-weight: 400;
+                }
+            }
+            
+        }
+    }
+}
+    
